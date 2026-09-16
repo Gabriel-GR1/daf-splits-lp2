@@ -117,7 +117,7 @@ h1 strong{font-weight:500;color:var(--gold-2)}
     width:100%;
     min-height:max(100svh,calc(100vw * 1.5));
     box-shadow:none;
-    background-size:100% auto;
+    background-size:contain;
     background-position:center top;
     background-repeat:no-repeat;
   }
@@ -141,8 +141,9 @@ h1 strong{font-weight:500;color:var(--gold-2)}
 @media(max-width:560px){
   .lp2{
     min-height:max(100svh,calc(100vw * 1.5));
-    background-size:100% auto;
+    background-size:contain;
     background-position:center top;
+    background-repeat:no-repeat;
   }
   .topbar{padding:19px 18px 0}
   .brand-daf{font-size:41px}
