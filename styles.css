@@ -145,14 +145,48 @@ h1 strong{font-weight:500;color:var(--gold-2)}
     background-position:center top;
     background-repeat:no-repeat;
   }
+
   .topbar{padding:19px 18px 0}
   .brand-daf{font-size:41px}
   .brand-sub{font-size:10px;gap:6px}.brand-sub i{width:17px}
   .top-kicker{font-size:7.5px;letter-spacing:.15em;gap:8px;white-space:nowrap}.top-kicker i{width:22px}
-  .hero{padding:64px 18px 220px}
+
+  .hero{
+    padding:64px 18px 220px;
+    isolation:isolate;
+  }
+  .hero::before{
+    content:"";
+    position:absolute;
+    inset:0;
+    z-index:0;
+    pointer-events:none;
+    background:linear-gradient(90deg,rgba(0,0,0,.72) 0%,rgba(0,0,0,.52) 52%,rgba(0,0,0,.12) 82%,transparent 100%);
+  }
+  .hero-copy{position:relative;z-index:2}
+
   .eyebrow{font-size:10px;letter-spacing:.23em}
-  h1{font-size:clamp(42px,12.7vw,56px)}
-  .lead{font-size:16px;line-height:1.5}
+  h1{
+    font-size:clamp(40px,11.8vw,50px);
+    font-weight:500;
+    color:#f7f3ec;
+    text-rendering:optimizeLegibility;
+    font-optical-sizing:auto;
+    text-shadow:0 2px 12px rgba(0,0,0,.32);
+  }
+  h1 strong{
+    font-weight:500;
+    color:#f2bd65;
+    text-shadow:0 2px 12px rgba(0,0,0,.38);
+  }
+  .lead{
+    font-size:16px;
+    line-height:1.5;
+    font-weight:400;
+    color:rgba(255,255,255,.95);
+    text-shadow:0 1px 8px rgba(0,0,0,.55);
+  }
+
   .cta{font-size:11px;height:60px;padding:0 16px}
   .arrow-icon{width:27px}
   .signature{bottom:28px;padding:0 14px}
