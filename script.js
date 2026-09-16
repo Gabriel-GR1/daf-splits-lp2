@@ -1,4 +1,4 @@
-const WHATSAPP_GROUP_URL = 'https://chat.whatsapp.com/EdzyVNDL1B4FIjU8irkXNP';
+const WHATSAPP_GROUP_URL = 'https://chat.whatsapp.com/Kb1fSaWOySr3M9aRyGnULk?s=cl&p=i&mlu=0&ilr=4';
 
 document.querySelectorAll('[data-whatsapp]').forEach((link) => {
   link.href = WHATSAPP_GROUP_URL;
