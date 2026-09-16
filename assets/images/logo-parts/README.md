@@ -1,0 +1,1 @@
+Temporary loader support files for the exact DAF logo image.
