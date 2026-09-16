@@ -7,26 +7,25 @@
 
 *{box-sizing:border-box}
 html,body{margin:0;min-height:100%;background:#020202;color:#fff;font-family:'Montserrat',sans-serif}
-body{min-width:320px}
+body{min-width:320px;overflow-x:hidden}
 a{color:inherit}
 
 /*
-  A imagem lp2-bg.png tem proporção vertical de 2:3.
-  Ela é sempre exibida inteira, sem crop, no desktop e no mobile.
+  Desktop: a imagem cobre toda a largura da janela para não deixar faixas pretas laterais.
+  Mobile/tablet: a imagem volta para contain para permanecer inteira.
 */
 .lp2{
   position:relative;
-  width:min(100%,1024px);
+  width:100%;
   min-height:1536px;
-  margin:0 auto;
+  margin:0;
   overflow:hidden;
   isolation:isolate;
   background-color:#030303;
   background-image:url('./assets/images/lp2-bg.png');
-  background-size:contain;
+  background-size:cover;
   background-position:center top;
   background-repeat:no-repeat;
-  box-shadow:0 0 80px rgba(0,0,0,.45);
 }
 
 .lp2::before{
@@ -127,7 +126,6 @@ h1 strong{font-weight:600;color:var(--gold-2)}
   .lp2{
     width:100%;
     min-height:max(100svh,calc(100vw * 1.5));
-    box-shadow:none;
     background-size:contain;
     background-position:center top;
     background-repeat:no-repeat;
