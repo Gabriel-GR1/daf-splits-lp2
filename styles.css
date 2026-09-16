@@ -43,21 +43,28 @@ a{color:inherit}
   display:flex;
   align-items:flex-start;
   justify-content:space-between;
-  padding:50px 57px 0 56px;
+  padding:42px 57px 0 56px;
 }
 
 .brand{
-  display:block;
-  width:142px;
+  display:flex;
+  align-items:flex-start;
+  justify-content:flex-start;
+  width:122px;
+  height:74px;
   text-decoration:none;
   line-height:0;
   flex:0 0 auto;
+  overflow:hidden;
 }
 .brand-logo{
   display:block;
   width:100%;
-  height:auto;
+  height:100%;
+  max-width:100%;
+  max-height:100%;
   object-fit:contain;
+  object-position:left top;
 }
 
 .top-kicker{display:flex;align-items:center;gap:23px;padding-top:37px;font-size:12px;letter-spacing:.31em;color:#f5f0e8;white-space:nowrap}
@@ -113,14 +120,33 @@ h1 strong{font-weight:600;color:var(--gold-2)}
   z-index:2;
   left:0;
   right:0;
-  bottom:72px;
+  bottom:54px;
+  padding:42px 20px 34px;
   text-align:center;
   font-family:'Bodoni Moda',serif;
-  letter-spacing:.35em;
+  letter-spacing:.24em;
+  background:radial-gradient(ellipse at center,rgba(0,0,0,.74) 0%,rgba(0,0,0,.48) 42%,rgba(0,0,0,.16) 68%,transparent 82%);
+  text-rendering:optimizeLegibility;
+  -webkit-font-smoothing:antialiased;
 }
-.signature p,.signature strong{margin:0;display:block;font-size:25px;font-weight:400}
-.signature strong{color:var(--gold-2);margin-top:10px}
-.signature span{display:block;width:58px;height:3px;background:var(--gold-2);margin:36px auto 0}
+.signature p,.signature strong{
+  margin:0;
+  display:block;
+  font-size:27px;
+  line-height:1.25;
+  font-weight:500;
+  text-shadow:0 2px 10px rgba(0,0,0,.95),0 0 2px rgba(0,0,0,.95);
+}
+.signature p{color:#fff}
+.signature strong{color:#f1b85b;margin-top:12px;font-weight:500}
+.signature span{
+  display:block;
+  width:66px;
+  height:4px;
+  background:#efbd69;
+  margin:31px auto 0;
+  box-shadow:0 0 10px rgba(239,189,105,.28);
+}
 
 @media(max-width:900px){
   .lp2{
@@ -131,8 +157,8 @@ h1 strong{font-weight:600;color:var(--gold-2)}
     background-repeat:no-repeat;
   }
   .lp2::before{background:linear-gradient(90deg,rgba(0,0,0,.30) 0%,rgba(0,0,0,.10) 48%,transparent 76%)}
-  .topbar{padding:26px 24px 0}
-  .brand{width:118px}
+  .topbar{padding:23px 24px 0}
+  .brand{width:102px;height:62px}
   .top-kicker{padding-top:24px;font-size:9px;letter-spacing:.22em;gap:13px}.top-kicker i{width:31px}
   .hero{min-height:auto;padding:94px 24px 260px}
   .hero-copy{max-width:560px}
@@ -142,8 +168,10 @@ h1 strong{font-weight:600;color:var(--gold-2)}
   .desktop-break{display:none}
   .cta{width:100%;max-width:446px;height:64px;padding:0 20px;gap:13px;font-size:13px}
   .whatsapp-icon{width:33px;height:33px;flex-basis:33px}
-  .signature{bottom:44px;padding:0 20px}
-  .signature p,.signature strong{font-size:18px;letter-spacing:.3em}
+  .signature{bottom:30px;padding:34px 20px 27px;letter-spacing:.22em}
+  .signature p,.signature strong{font-size:19px;font-weight:500}
+  .signature strong{margin-top:9px}
+  .signature span{width:56px;height:3px;margin-top:27px}
 }
 
 @media(max-width:560px){
@@ -154,8 +182,8 @@ h1 strong{font-weight:600;color:var(--gold-2)}
     background-repeat:no-repeat;
   }
 
-  .topbar{padding:19px 18px 0}
-  .brand{width:106px}
+  .topbar{padding:16px 18px 0}
+  .brand{width:90px;height:54px}
   .top-kicker{font-size:7.5px;letter-spacing:.15em;gap:8px;white-space:nowrap}.top-kicker i{width:22px}
 
   .hero{
@@ -199,7 +227,17 @@ h1 strong{font-weight:600;color:var(--gold-2)}
 
   .cta{font-size:11px;height:60px;padding:0 16px}
   .arrow-icon{width:27px}
-  .signature{bottom:28px;padding:0 14px}
-  .signature p,.signature strong{font-size:14px;letter-spacing:.28em}
-  .signature span{width:48px;margin-top:25px}
+  .signature{
+    bottom:16px;
+    padding:27px 14px 22px;
+    letter-spacing:.18em;
+    background:radial-gradient(ellipse at center,rgba(0,0,0,.82) 0%,rgba(0,0,0,.58) 46%,rgba(0,0,0,.18) 70%,transparent 84%);
+  }
+  .signature p,.signature strong{
+    font-size:15px;
+    font-weight:500;
+    text-shadow:0 2px 8px rgba(0,0,0,.98),0 0 1px #000;
+  }
+  .signature strong{margin-top:8px}
+  .signature span{width:50px;height:3px;margin-top:23px}
 }
