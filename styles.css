@@ -48,16 +48,18 @@ a{color:inherit}
 }
 
 .brand{
-  display:inline-flex;
-  flex-direction:column;
-  align-items:center;
+  display:block;
+  width:142px;
   text-decoration:none;
-  color:var(--gold-2);
-  line-height:1;
+  line-height:0;
+  flex:0 0 auto;
 }
-.brand-daf{font-family:'Bodoni Moda',serif;font-size:64px;letter-spacing:-.055em;font-weight:400}
-.brand-sub{display:flex;align-items:center;gap:9px;margin-top:0;font-size:17px;letter-spacing:.19em;font-weight:500}
-.brand-sub i{width:29px;height:2px;background:var(--gold-2);display:block}
+.brand-logo{
+  display:block;
+  width:100%;
+  height:auto;
+  object-fit:contain;
+}
 
 .top-kicker{display:flex;align-items:center;gap:23px;padding-top:37px;font-size:12px;letter-spacing:.31em;color:#f5f0e8;white-space:nowrap}
 .top-kicker i{display:block;width:48px;height:2px;background:var(--gold-2)}
@@ -132,8 +134,7 @@ h1 strong{font-weight:600;color:var(--gold-2)}
   }
   .lp2::before{background:linear-gradient(90deg,rgba(0,0,0,.30) 0%,rgba(0,0,0,.10) 48%,transparent 76%)}
   .topbar{padding:26px 24px 0}
-  .brand-daf{font-size:48px}
-  .brand-sub{font-size:12px}.brand-sub i{width:21px}
+  .brand{width:118px}
   .top-kicker{padding-top:24px;font-size:9px;letter-spacing:.22em;gap:13px}.top-kicker i{width:31px}
   .hero{min-height:auto;padding:94px 24px 260px}
   .hero-copy{max-width:560px}
@@ -156,8 +157,7 @@ h1 strong{font-weight:600;color:var(--gold-2)}
   }
 
   .topbar{padding:19px 18px 0}
-  .brand-daf{font-size:41px}
-  .brand-sub{font-size:10px;gap:6px}.brand-sub i{width:17px}
+  .brand{width:106px}
   .top-kicker{font-size:7.5px;letter-spacing:.15em;gap:8px;white-space:nowrap}.top-kicker i{width:22px}
 
   .hero{
