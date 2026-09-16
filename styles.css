@@ -10,6 +10,10 @@ html,body{margin:0;min-height:100%;background:#020202;color:#fff;font-family:'Mo
 body{min-width:320px}
 a{color:inherit}
 
+/*
+  A imagem lp2-bg.png tem proporção vertical de 2:3.
+  Ela é sempre exibida inteira, sem crop, no desktop e no mobile.
+*/
 .lp2{
   position:relative;
   width:min(100%,1024px);
@@ -19,7 +23,7 @@ a{color:inherit}
   isolation:isolate;
   background-color:#030303;
   background-image:url('./assets/images/lp2-bg.png');
-  background-size:cover;
+  background-size:contain;
   background-position:center top;
   background-repeat:no-repeat;
   box-shadow:0 0 80px rgba(0,0,0,.45);
@@ -111,12 +115,13 @@ h1 strong{font-weight:500;color:var(--gold-2)}
 @media(max-width:900px){
   .lp2{
     width:100%;
-    min-height:max(100svh,150vw);
+    min-height:max(100svh,calc(100vw * 1.5));
     box-shadow:none;
-    background-size:cover;
-    background-position:64% top;
+    background-size:100% auto;
+    background-position:center top;
+    background-repeat:no-repeat;
   }
-  .lp2::before{background:linear-gradient(90deg,rgba(0,0,0,.34) 0%,rgba(0,0,0,.12) 48%,transparent 75%)}
+  .lp2::before{background:linear-gradient(90deg,rgba(0,0,0,.30) 0%,rgba(0,0,0,.10) 48%,transparent 76%)}
   .topbar{padding:26px 24px 0}
   .brand-daf{font-size:48px}
   .brand-sub{font-size:12px}.brand-sub i{width:21px}
@@ -135,8 +140,9 @@ h1 strong{font-weight:500;color:var(--gold-2)}
 
 @media(max-width:560px){
   .lp2{
-    min-height:max(100svh,168vw);
-    background-position:66% top;
+    min-height:max(100svh,calc(100vw * 1.5));
+    background-size:100% auto;
+    background-position:center top;
   }
   .topbar{padding:19px 18px 0}
   .brand-daf{font-size:41px}
