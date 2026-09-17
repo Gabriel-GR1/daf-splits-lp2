@@ -7,6 +7,7 @@ n.queue=[];t=b.createElement(e);t.async=!0;
 t.src=v;s=b.getElementsByTagName(e)[0];
 s.parentNode.insertBefore(t,s)}(window, document,'script',
 'https://connect.facebook.net/en_US/fbevents.js');
+fbq('set', 'autoConfig', false, '1470839471393001');
 fbq('init', '1470839471393001');
 fbq('track', 'PageView');
 
@@ -19,13 +20,14 @@ document.querySelectorAll('[data-whatsapp]').forEach((link) => {
 
   link.addEventListener('click', () => {
     if (typeof window.fbq === 'function') {
-      window.fbq('trackCustom', 'WhatsAppGroupClick', { page: 'lp2-nicho' });
+      window.fbq('track', 'Lead');
     }
 
     if (Array.isArray(window.dataLayer)) {
       window.dataLayer.push({
-        event: 'whatsapp_group_click',
-        page: 'lp2-nicho'
+        event: 'lead',
+        page: 'lp2-nicho',
+        source: 'whatsapp_group'
       });
     }
   });
