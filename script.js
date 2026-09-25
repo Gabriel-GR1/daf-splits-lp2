@@ -45,14 +45,14 @@ document.querySelectorAll('[data-whatsapp]').forEach((link) => {
   link.rel = 'noopener noreferrer';
 
   link.addEventListener('click', () => {
-    // Mantém a conversão principal da LP2 como Lead, agora no TikTok.
+    // Conversão do TikTok ao clicar no botão de entrada no grupo.
     if (typeof window.ttq?.track === 'function') {
-      window.ttq.track('Lead');
+      window.ttq.track('CompleteRegistration');
     }
 
     if (Array.isArray(window.dataLayer)) {
       window.dataLayer.push({
-        event: 'lead',
+        event: 'complete_registration',
         page: 'lp2-nicho',
         source: 'whatsapp_group'
       });
