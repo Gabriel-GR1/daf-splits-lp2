@@ -1,5 +1,5 @@
 const TIKTOK_PIXEL_ID = 'DAQ2BHBC77UFPT802QG0';
-const WHATSAPP_GROUP_URL = 'https://chat.whatsapp.com/CJmt4Dzmln3EuOJoCi0Tkq';
+const WHATSAPP_GROUP_URL = 'https://chat.whatsapp.com/GCi2WhyhAPXEExFhNszgoX?s=cl&p=a&mlu=4&ilr=4';
 
 document.querySelectorAll('[data-whatsapp]').forEach((link) => {
   link.href = WHATSAPP_GROUP_URL;
